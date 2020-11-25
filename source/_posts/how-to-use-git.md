@@ -1,12 +1,14 @@
 ---
-title: How to Use Git
+title: How to use Git
 date: 2020-11-12 20:23:07
 tags: [tool]
-categories: [collaboration] 
+categories: 
+- [notes]
+- [collaboration]
 ---
 
 Description: 
-This post summaries the book [ProGit](https://www.git-scm.com/book/en/v2).
+This post is a brief summary of book [ProGit](https://www.git-scm.com/book/en/v2), written by Scott Chacon and Ben Straub (2014). It introduces version control system, basic and advanced Git commands, and Github services.
 
 
 # Getting Started
@@ -70,41 +72,82 @@ Basic Git workflow:
 	- untracked files: Git sees a file which has no previous snapshot
 	- new file
 	- modified
+
 - tracking new files: `git add <filename>`
 	- if you modify a file after you run `git add`, you have to run `git add` again to stage the latest version of the file
-- short status: `git status -s` or `git status -short`
+
+- short status: 
+	- `git status -s` or `git status --short`
+	- returned value:
+		- ??: files not tracked
+		- A: files added to index
+		- M: files modified
+		- D: deleted from index
+
 - ignore files (.gitignore): 
 	- ignore syntax (#, /, !)
-- see changes (TO BE CHECKED): 
+
+- see changes: 
 	- unstaged changes: `git diff` 
 	- staged changes: `git diff --staged` 
 	- staged changes: `git diff --cached`
-- commit: `git commit` `git commit -m "message"`
+
+- commit: `git commit -m "message"`
+
 - remove files from Git: `git rm`
+
 - move files: `git mv file_from file_to`
 
-## View the Commit History (TO BE ADDED)
+## View the Commit History
 
-`git log`
+- list the commits: `git log`
+- show the patch introduced with each commit: `git log -p`
+- show statistics for files modified in each commit: `git log --stat`
+- `git log --pretty=short`
+- `git log --oneline --decorate`
+- `git log --graph`
+- `git show <beginning_hash_characters>`
 
-## Undoing Things
+## Undo Things
 
-`git commit --amend`
+- `git commit --amend`
+- unstage a staged file: `git reset HEAD <file>...`
+- unstage a staged file: `git restore --staged <file>...`
+- unmodifiy a modified file: `git checkout -- <file>...`
 
+## Work with Remotes
+
+- `git clone <url>`
+- show remote servers: 
+	- `git remote`
+	- `git remote -v`
+- `git remote add <shortname> <url>`
+- `git fetch <remote>`
+- `git push <remote> <branch>`
+- inspect a remote: `git remote show <remote>`
+- rename a remote: `git remote rename name_from name_to`
+- remove a remote: `git remote remove <remote>`
+
+## Tag
+
+(skipped)
 
 
 # Git Branching
 
-# Git on the Server
+## Branches in a Nutshell
 
-# Distributed Git
+- create a new branch: `git branch <branch_name>`
+- create a new branch and switch to it: `git checkout -b <branch_name>`
+- switch branches: `git checkout <branch_name>`
+(`git switch` is available for `git checkout` after Git v2.23)
 
-# GitHub
+## Basic Branching and Merging
 
-# Git Tools
+## Branch Management
 
-# Customizing Git
+## Branch Workflows
 
-# Git and Other Systems
+## Remote Branches
 
-# Git Internals
+## Rebasing
