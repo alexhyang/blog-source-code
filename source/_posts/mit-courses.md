@@ -22,7 +22,7 @@ categories: [course]
 ## General Math
 - [18.01SC Single Variable Calculus (Fall 2010)](https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/index.htm) Prof. David Jeriso ([videos](https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1), [homework help](https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1))
 - [18.02SC Multivariable Calculus (Fall 2010)](https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/) Prof. Denis Auroux ([videos](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38), [homework help](https://www.youtube.com/playlist?list=PLF07555F3CC669D01))
-- 18.03 Differential Equations (Fall 2011) Prof. Arthur Mattuck, etc. (videos)
+- [18.03SC Differential Equations (Fall 2011)](https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/) Prof. Arthur Mattuck, etc. ([videos](https://www.youtube.com/playlist?list=PL64BDFBDA2AF24F7E))
 - 18.04 Complex Variables with Applications (Spring 2018) Jeremy Orloff
 - 18.05 Introduction to Probability and Statistics (Spring 2014) Jeremy Orloff & Jonathan Bloom
 - 18.06 Linear Algebra (Fall 2011) Prof. Gilbert Strang (videos)
