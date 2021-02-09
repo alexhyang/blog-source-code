@@ -162,6 +162,7 @@ Basic Git workflow:
 # Chapter 3. Git Branching
 
 ## Branches in a Nutshell
+
 - branch: lightweight movable pointer to one of these commits
 - create a new branch: 
 	- `git branch <branch_name>`
@@ -173,10 +174,43 @@ Basic Git workflow:
 
 ## Basic Branching and Merging
 
+- fast-forward:
+	1. have a clean working state when switching branches
+	2. main branch with no change, new-feature branch ahead of it: pointer directly move to the next snapshot
+	3. delete the new-feature branch after merging: `git branch -d <branch_name>`
+- basic merge:
+	1. common ancestor snapshot: S1
+	2. main branch on next snapshot: S1 --> S2
+	3. new-feature branch (ex. issue51) on next snapshot: S1 --> S3 --> S4
+	4. merge commit: 
+		- switch to main: `git checkout main`
+		- merge new feature: `git merge issue51`
+	5. three way merge (S1, S2, S4):
+		- new commit created with two parents S2 & S4
+- basic merge conflicts:
+	- changes in the same part of the same file differently in two branches result in conflicts
+	- conflicts needs to be fixed before merging
+
 ## Branch Management
+
+- git branch command:
+	- listing of current branches: `git branch`
+	- last commit on each branch: `git branch -v`
+	- delete branch: `git branch -d <branch_name>`
+	- change branch name:
+		1. rename branch locally: `git branch --move old-name new-name`
+		2. rename branch on remote: `git push --set-upstream origin new-name`
+		3. delete old branch on remote: `git push origin --delete old-name`
 
 ## Branch Workflows
 
-## Remote Branches
+- long-running branches
+	- main branch
+	- develop branch
+	- topic branch
 
-## Rebasing
+- top branches
+
+## Remote Branches (skipped)
+
+## Rebasing (skipped)
